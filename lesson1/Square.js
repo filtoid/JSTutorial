@@ -1,5 +1,11 @@
-function Square(){
+function Square(_x, _y){
 	this.loc = new Location(200,200);
+
+	if(_x != undefined){
+		this.loc.x = _x;
+	}
+	this.loc.y = _y || 200;
+
 	this.update = sqUpdate;
 	this.draw = sqDraw;
 	this.rot = 0;
